@@ -5,15 +5,11 @@
   "scripts": {
     "start": "nodemon --inspect ./bin/www",
     "watch": "node-sass --watch src/scss/ --output public/css/",
-    "beautiful": "lint-staged"
+    "beautiful": "lint-staged",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 2 --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
